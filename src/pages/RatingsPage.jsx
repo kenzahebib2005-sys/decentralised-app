@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { IconStar, IconTrendUp } from '../components/icons.jsx'
 import { RatingModal } from '../components/RatingModal.jsx'
-
+import '../styles/dashboard.css'
 const DISTRIBUTION = [
   { stars: 5, count: 892 },
   { stars: 4, count: 215 },

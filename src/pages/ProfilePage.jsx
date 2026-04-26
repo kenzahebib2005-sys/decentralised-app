@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-
+import '../styles/profile.css'
 export function ProfilePage() {
   const [role, setRole] = useState('passenger')
   const [photo, setPhoto] = useState(null)

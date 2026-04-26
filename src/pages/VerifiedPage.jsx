@@ -1,3 +1,4 @@
+import '../styles/verified.css'
 export function VerifiedPage() {
 const stats = [
     { icon: (

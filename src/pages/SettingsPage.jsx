@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import '../styles/settings.css'
 export function SettingsPage() {
   const [showDeleteModal, setShowDeleteModal] = useState(false)
 
