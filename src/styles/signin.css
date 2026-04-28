@@ -8,7 +8,6 @@
   --text-muted: #6b7280;
   --input-border: rgba(255, 255, 255, 0.3);
   --input-bg: rgba(255, 255, 255, 0.15);
-  --radius: 14px;
   --shadow: 0 25px 60px rgba(26, 63, 196, 0.25);
 }
 
@@ -16,7 +15,7 @@
   box-sizing: border-box;
 }
 
-.signup-container {
+.signin-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +28,6 @@
   gap: 60px;
 }
 
-/* ── Left panel ── */
 .left {
   width: 42%;
   padding: 20px 0;
@@ -53,7 +51,6 @@
   margin-top: 0;
   mix-blend-mode: multiply;
 }
-/* ── Badge ── */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -70,7 +67,6 @@
   width: fit-content;
 }
 
-/* ── Title ── */
 h1.title {
   font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 800;
@@ -79,7 +75,6 @@ h1.title {
   letter-spacing: -0.02em;
 }
 
-/* ── Paragraph ── */
 p.para {
   font-size: 15px;
   color: var(--text-muted);
@@ -87,7 +82,6 @@ p.para {
   max-width: 420px;
 }
 
-/* ── Road image only ── */
 .left > img {
   width: 100%;
   height: 280px;
@@ -97,8 +91,7 @@ p.para {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 }
 
-/* ── Right panel (form card) ── */
-.signup-right {
+.signin-right {
   width: 400px;
   background: var(--form-bg);
   padding: 36px 32px 32px;
@@ -108,7 +101,7 @@ p.para {
   overflow: hidden;
 }
 
-.signup-right::before {
+.signin-right::before {
   content: '';
   position: absolute;
   top: -60px;
@@ -120,21 +113,20 @@ p.para {
   pointer-events: none;
 }
 
-.signup-right h2 {
+.signin-right h2 {
   font-size: 26px;
   font-weight: 700;
   color: var(--white);
   margin-bottom: 4px;
 }
 
-.signup-right p.para {
+.signin-right p.para {
   color: rgba(255, 255, 255, 0.65);
   font-size: 13px;
   margin-bottom: 20px;
 }
 
-/* ── Toggle buttons ── */
-.signup-buttons {
+.signin-buttons {
   display: flex;
   margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.1);
@@ -143,7 +135,7 @@ p.para {
   gap: 4px;
 }
 
-.signup-buttons button {
+.signin-buttons button {
   flex: 1;
   padding: 9px 12px;
   border: none;
@@ -156,20 +148,19 @@ p.para {
   transition: all 0.2s ease;
 }
 
-.signup-buttons button.signup-active {
+.signin-buttons button.signin-active {
   background: var(--white);
   color: var(--primary);
   font-weight: 600;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* ── Form fields ── */
-.signup-info {
+.signin-info {
   margin-bottom: 12px;
   font-size: 12px;
 }
 
-.signup-info label {
+.signin-info label {
   display: block;
   font-size: 12px;
   font-weight: 500;
@@ -178,7 +169,7 @@ p.para {
   letter-spacing: 0.03em;
 }
 
-.signup-right input {
+.signin-right input {
   width: 100%;
   padding: 11px 14px;
   border-radius: 8px;
@@ -191,17 +182,16 @@ p.para {
   transition: border-color 0.2s, background 0.2s;
 }
 
-.signup-right input::placeholder {
+.signin-right input::placeholder {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.signup-right input:focus {
+.signin-right input:focus {
   border-color: rgba(255, 255, 255, 0.6);
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* ── Sign up button ── */
-.signup-signup {
+.signin-signin {
   width: 100%;
   padding: 13px;
   background: var(--white);
@@ -216,21 +206,20 @@ p.para {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.signup-signup:hover {
+.signin-signin:hover {
   background: var(--primary-light);
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* ── Log in link ── */
-.signup-right > p {
+.signin-right > p {
   text-align: center;
   margin-top: 14px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.signup-right > p a {
+.signin-right > p a {
   color: var(--white);
   font-weight: 600;
   text-decoration: none;
@@ -238,12 +227,11 @@ p.para {
   padding-bottom: 1px;
 }
 
-.signup-right > p a:hover {
+.signin-right > p a:hover {
   border-color: var(--white);
 }
 
-/* ── OR divider ── */
-.signup-or-text {
+.signin-or-text {
   text-align: center;
   margin-top: 16px;
   font-size: 11px;
@@ -253,8 +241,8 @@ p.para {
   position: relative;
 }
 
-.signup-or-text::before,
-.signup-or-text::after {
+.signin-or-text::before,
+.signin-or-text::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -263,18 +251,17 @@ p.para {
   background: rgba(255, 255, 255, 0.15);
 }
 
-.signup-or-text::before { left: 0; }
-.signup-or-text::after  { right: 0; }
+.signin-or-text::before { left: 0; }
+.signin-or-text::after  { right: 0; }
 
-/* ── Social buttons ── */
-.signup-social-login {
+.signin-social-login {
   display: flex;
   justify-content: center;
   gap: 12px;
   margin-top: 12px;
 }
 
-.signup-social-btn {
+.signin-social-btn {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -287,13 +274,13 @@ p.para {
   transition: background 0.2s, border-color 0.2s, transform 0.15s;
 }
 
-.signup-social-btn:hover {
+.signin-social-btn:hover {
   background: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
 }
 
-.signup-social-btn img {
+.signin-social-btn img {
   width: 20px;
   height: 20px;
   object-fit: contain;

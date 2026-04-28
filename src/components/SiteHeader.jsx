@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { IconBell } from './icons.jsx'
 
 export function SiteHeader() {
@@ -16,7 +16,7 @@ export function SiteHeader() {
         <button type="button" className="st-btn st-btn--ghost" onClick={() => navigate('/signin')}>
           Sign in
         </button>
-        <button type="button" className="st-icon-btn" aria-label="Notifications">
+        <button type="button" className="st-icon-btn"  onClick={() => navigate('/notifications')}>
           <IconBell />
         </button>
       </div>

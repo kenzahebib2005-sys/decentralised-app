@@ -1,17 +1,18 @@
 import { useState } from "react";
 import '../styles/signup.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Signup() {
   const [userType, setUserType] = useState("driver");
+  const navigate = useNavigate();
 
   return (
     <div className="signup-container">
 
       <div className="left">
         <div className="symbol">
-          <img src="symbol.png" alt="road" />
-        </div>
+        <img src="/sharetrajet-logo.png" alt="ShareTrajet" />
+         </div>
 
         <button className="badge">
           FOR ALGERIA, by Algerians
@@ -77,25 +78,24 @@ function Signup() {
 
         <p>
           Already have an account?
-          <Link to="../signin"> Log In </Link>
+          <Link to="/signin"> Log In </Link>
         </p>
 
         <p className="signup-or-text">OR SIGN UP WITH</p>
 
-        {/* Fixed: removed <a> wrapping <button> — invalid HTML */}
         <div className="signup-social-login">
           <button
             className="signup-social-btn"
             onClick={() => window.location.href = 'https://accounts.google.com'}
           >
-            <img src="google.png" alt="google" />
+            <img src="/google.png" alt="Continue with Google" />
           </button>
 
           <button
             className="signup-social-btn"
             onClick={() => window.location.href = 'https://appleid.apple.com'}
           >
-            <img src="apple.png" alt="apple" />
+            <img src="/apple.png" alt="Continue with Apple" />
           </button>
         </div>
 
