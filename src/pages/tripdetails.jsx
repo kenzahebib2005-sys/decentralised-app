@@ -33,8 +33,8 @@ const TripDetails = () => {
  
         {/* Logo */}
         <div className="nav-logo">
-          <img src="/symbol.png" alt="ShareTrajet logo" className="nav-logo-img" />
-          <span className="nav-logo-text">-ShareTrajet-</span>
+          <img src="/sharetrajet-logo-v2.png" alt="ShareTrajet logo" className="nav-logo-img" />
+         
         </div>
  
         {/* Center links */}

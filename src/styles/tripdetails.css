@@ -112,7 +112,7 @@
   gap: 8px;
 }
 .btn-signup {
-  background: #3a86ff;
+     background: linear-gradient(135deg, #3b82f6, #1d4ed8);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -124,7 +124,7 @@
 .btn-signup:hover { background: #2573e8; }
  
 .btn-login {
-  background: transparent;
+     background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
   color: #111;
   border: 0.5px solid #ccc;
   border-radius: 10px;
