@@ -19,42 +19,77 @@ body {
 /* POPUP */
 .publish-popup {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(10, 12, 40, 0.6);
+  inset: 0; /* Modern shorthand for top/left/bottom/right: 0 */
+  background: rgba(10, 12, 40, 0.4);
+  backdrop-filter: blur(8px); /* Softens the background for a premium feel */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
 }
 
 .publish-popup-content {
-  background: #fff;
-  padding: 48px 44px;
-  border-radius: 18px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 24px;
   text-align: center;
-  max-width: 400px;
-  width: 90%;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .publish-popup-content h1 {
-  color: #3b55f0;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 10px;
+  color: #1a1a1a; /* Darker for better readability */
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.publish-popup-content p {
+  color: #64748b; /* Added a secondary color for descriptions */
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .publish-popup-content button {
-  margin-top: 20px;
-  padding: 10px 28px;
+  margin-top: 32px;
+  padding: 14px 32px;
   background: #3b55f0;
   color: #fff;
   border: none;
-  border-radius: 10px;
-  font-size: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(59, 85, 240, 0.3);
 }
 
+.publish-popup-content button:hover {
+  background: #2d44d6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(59, 85, 240, 0.4);
+}
+
+.publish-popup-content button:active {
+  transform: translateY(0);
+}
+
+/* Animations for that "pop" effect */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 /* ── Navbar ── */
 .navbar {
   display: flex;

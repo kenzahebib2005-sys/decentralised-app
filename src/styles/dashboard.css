@@ -457,68 +457,99 @@
   padding: 1rem;
 }
 
+/* Container for the overlay */
+.st-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 40, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
 .st-modal {
-  width: min(420px, 100%);
-  background: var(--st-modal-bg);
-  border-radius: 16px;
-  border: 2px solid var(--st-navy);
-  padding: 1.5rem 1.35rem 1.25rem;
-  box-shadow: 0 24px 48px rgba(15, 24, 128, 0.2);
-  transition: all 0.25s ease;
+  width: 100%;
+  max-width: 420px; /* Matching your other popups exactly */
+  background: #ffffff;
+  border-radius: 24px; /* Matching the 24px radius */
+  padding: 40px; /* Standardized internal spacing */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border: none; /* Removing the border for a cleaner look */
+  text-align: center; /* Center align to match the others */
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .st-modal__title {
-  margin: 0 0 0.5rem;
-  font-size: 1.45rem;
+  margin-bottom: 12px;
+  font-size: 28px;
   font-weight: 800;
-  color: var(--st-navy);
-  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
 }
 
 .st-modal__stars {
   display: flex;
-  gap: 0.35rem;
-  margin: 1rem 0 1.25rem;
-}
-
-.st-modal__stars svg {
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  justify-content: center; /* Center the stars */
+  gap: 12px;
+  margin: 24px 0 32px;
 }
 
 .st-star-btn {
   background: none;
   border: none;
-  padding: 0.15rem;
-  line-height: 0;
-  border-radius: 20px;
+  padding: 8px;
   cursor: pointer;
-  transition: background 0.15s ease;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.st-star-btn:hover { background: rgba(0, 0, 0, 0.06); }
+.st-star-btn:hover {
+  transform: scale(1.2); /* Make the star "pop" on hover */
+}
 
-.st-star-btn:focus-visible {
-  outline: 2px solid var(--st-blue);
-  outline-offset: 2px;
+.st-star-btn svg {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .st-modal__actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center; /* Center the button to match the design system */
 }
 
 .st-btn--done {
-  background: #fff;
-  color: var(--st-blue);
-  border: 2px solid var(--st-blue);
-  font-weight: 700;
-  padding: 0.45rem 1.5rem;
-  border-radius: 10px;
+  width: 100%; /* Make button full width for a modern mobile-friendly feel */
+  background: #3b55f0;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(59, 85, 240, 0.3);
 }
 
-.st-btn--done:hover { background: #eff6ff; }
+.st-btn--done:hover {
+  background: #2d44d6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(59, 85, 240, 0.4);
+}
 
+.st-btn--done:active {
+  transform: translateY(0);
+}
+
+/* Reusing animations */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .st-coming {
   max-width: 520px;
   background: #fff;
