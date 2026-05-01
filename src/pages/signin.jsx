@@ -8,7 +8,7 @@ function Signin() {
 
       <div className="left">
         <div className="symbol">
-          <img src="/sharetrajet-logo.png" alt="ShareTrajet" />
+          <img src="/trajet.png" alt="ShareTrajet" />
         </div>
 
         <button className="badge">
