@@ -157,11 +157,11 @@ const TripDetails = () => {
         </aside>
       </main>
  
-      <footer className="trip-footer">
-        <button className="back-link-btn" onClick={() => navigate(-1)}>
-          <span className="back-arrow">‹</span> Going back to offer a ride
-        </button>
-      </footer>
+     <footer className="trip-footer">
+  <button className="back-link-btn" onClick={() => navigate('/')}>
+    <span className="back-arrow">‹</span> Retour à l'accueil
+  </button>
+</footer>
     </div>
   );
 };
