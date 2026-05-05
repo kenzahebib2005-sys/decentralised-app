@@ -1,0 +1,243 @@
+/*
+ * Landing.css
+ * Styles scoped exclusively to the Landing page (Landing.jsx).
+ * Sections:
+ *  1. Reset & Base
+ *  2. Site Header
+ *  3. Landing / Home Page
+ */
+ 
+ 
+/* ============================================================
+   1. RESET & BASE
+   ============================================================ */
+ 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #e8eaf0;
+  min-height: 100vh;
+}
+ 
+ 
+/* ============================================================
+   2. SITE HEADER
+   ============================================================ */
+ 
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0f2f5;
+  padding: 0 24px;
+  height: 70px;
+  border-bottom: 1px solid #dde0e8;
+}
+ 
+/* Brand: logo stacked above text */
+.site-header__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+ 
+.site-header__logo-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+ 
+.site-header__brand-text {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #3a3a3a;
+  letter-spacing: 0.01em;
+  margin-top: 1px;
+  text-align: center;
+}
+ 
+/* Right-side action buttons */
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+ 
+/* Base button */
+.btn {
+  padding: 7px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.18s;
+}
+ 
+.btn:hover { opacity: 0.85; }
+ 
+.btn--signup {
+  background: #2563eb;
+  color: white;
+}
+ 
+.btn--signin {
+  background: #ffffff;
+  color: #333;
+  border: 1.5px solid #bcc2ce;
+}
+ 
+/* Icon-only button (bell, chat) */
+.btn--icon {
+  background: transparent;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+ 
+/* User avatar circle */
+.avatar-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e0c8b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: 1px solid #c8a898;
+}
+ 
+ 
+/* ============================================================
+   3. LANDING / HOME PAGE
+   ============================================================ */
+ 
+.home-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+ 
+/* Full-page gradient backdrop */
+.home-main {
+  flex: 1;
+  background: linear-gradient(160deg, #4a6670 0%, #2d4a3e 40%, #1e3a30 70%, #2a5040 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  min-height: calc(100vh - 70px); /* matches header height */
+}
+ 
+/* Two-card row */
+.home-cards {
+  display: flex;
+  gap: 36px;
+  width: 100%;
+  max-width: 1100px;
+  justify-content: center;
+  align-items: stretch;
+}
+ 
+/* Individual card */
+.ride-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 52px 48px 44px;
+  flex: 1;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+}
+ 
+/* Coloured icon circle */
+.ride-card__icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  flex-shrink: 0;
+}
+ 
+.ride-card__icon--blue   { background: #2563eb; }
+.ride-card__icon--orange { background: #d4521a; }
+ 
+/* Card title */
+.ride-card__title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 18px;
+  line-height: 1.15;
+}
+ 
+/* Card body copy */
+.ride-card__desc {
+  font-size: 0.97rem;
+  color: #666;
+  line-height: 1.65;
+  margin-bottom: 36px;
+  max-width: 380px;
+}
+ 
+/* CTA button */
+.ride-card__btn {
+  width: 100%;
+  padding: 18px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: opacity 0.18s, transform 0.12s;
+}
+ 
+.ride-card__btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+ 
+.ride-card__btn--blue {
+  background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 100%);
+}
+ 
+.ride-card__btn--orange {
+  background: linear-gradient(90deg, #c0440e 0%, #d4521a 60%, #e05a1e 100%);
+}
+ 
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .home-cards {
+    flex-direction: column;
+    gap: 24px;
+  }
+ 
+  .ride-card {
+    padding: 36px 28px 32px;
+  }
+ 
+  .ride-card__title {
+    font-size: 1.5rem;
+  }
+}

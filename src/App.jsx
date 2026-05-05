@@ -13,6 +13,8 @@ import Signin from './pages/signin.jsx';
 import Notifications from './pages/notifications.jsx';
 import TripDetails from './pages/tripdetails.jsx';
 import ReservationPage from './pages/ReservationPage.jsx';
+import HomePage from './pages/landing.jsx';  // ← capital, and import HomePage specifically
+
 export default function App() {
   return (
     <Routes>
@@ -20,12 +22,13 @@ export default function App() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/signin" element={<Signin />} />
 
-      {/* 2. DASHBOARD ROUTES */}
+      {/* 2. LANDING */}
+      <Route path="/" element={<HomePage />} />
+   
+
+      {/* 3. DASHBOARD ROUTES */}
       <Route element={<DashboardLayout />}>
-        {/* FIX: Use lowercase "/reservation" to match the route below */}
-        <Route path="/" element={<Navigate to="/reservation" replace />} />
         <Route path="/dashboard" element={<Navigate to="/reservation" replace />} />
-        
         <Route path="/ratings" element={<RatingsPage />} />
         <Route path="/comment" element={<CommentPage />} />
         <Route path="/profile" element={<ProfilePage />} />
@@ -35,14 +38,13 @@ export default function App() {
         <Route path="/verified" element={<VerifiedPage />} />
       </Route>
 
-      {/* 3. MAIN APP ROUTES */}
+      {/* 4. MAIN APP ROUTES */}
       <Route path="/publish" element={<Publish />} />
-      {/* Ensure path is "/reservation" lowercase */}
       <Route path="/reservation" element={<ReservationPage />} />
       <Route path="/tripdetails" element={<TripDetails />} />
       <Route path="/notifications" element={<Notifications />} />
 
-      {/* 4. FALLBACK */}
+      {/* 5. FALLBACK */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
