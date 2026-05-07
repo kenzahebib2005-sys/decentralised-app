@@ -18,18 +18,133 @@ function SearchIconHome() {
   );
 }
  
+function IconProfile({ color }) {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+    </svg>
+  );
+}
+ 
+function IconMessage({ color }) {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+    </svg>
+  );
+}
+ 
+function IconPreferences({ color }) {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+    </svg>
+  );
+}
+ 
+function IconSettings({ color }) {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+    </svg>
+  );
+}
+ 
+function IconVerified({ color }) {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      <polyline points="9 12 11 14 15 10" />
+    </svg>
+  );
+}
+ 
+function IconStar({ color }) {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+    </svg>
+  );
+}
+ 
+function IconSearch({ color }) {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+  );
+}
+ 
+function IconPublish({ color }) {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <polyline points="14 2 14 8 20 8" />
+      <line x1="12" y1="18" x2="12" y2="12" />
+      <line x1="9" y1="15" x2="15" y2="15" />
+    </svg>
+  );
+}
+ 
+function IconCalendar({ color }) {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+      <line x1="16" y1="2" x2="16" y2="6" />
+      <line x1="8" y1="2" x2="8" y2="6" />
+      <line x1="3" y1="10" x2="21" y2="10" />
+    </svg>
+  );
+}
+ 
 function menuBtnStyle(color) {
   return {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '8px',
     background: color,
     color: 'white',
     border: 'none',
     borderRadius: '8px',
-    padding: '12px 16px',
-    fontSize: '0.92rem',
+    padding: '10px 14px',
+    fontSize: '0.88rem',
     fontWeight: '600',
     cursor: 'pointer',
     textAlign: 'left',
-    transition: 'opacity 0.15s',
+    transition: 'opacity 0.15s, transform 0.15s',
+    width: '100%',
+  };
+}
+ 
+const dropdownStyle = {
+  overflow: 'hidden',
+  borderRadius: '12px',
+  boxShadow: '0 8px 32px rgba(0,0,0,0.14)',
+  background: '#fff',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '6px',
+  transition: 'max-height 0.35s ease, opacity 0.3s ease, transform 0.3s ease',
+};
+ 
+function getDropdownOpenStyle(open) {
+  return {
+    ...dropdownStyle,
+    maxHeight: open ? '500px' : '0px',
+    opacity: open ? 1 : 0,
+    pointerEvents: open ? 'auto' : 'none',
+    position: 'absolute',
+    bottom: '70px',
+    left: '50%',
+    transform: open
+      ? 'translateX(-50%) translateY(0)'
+      : 'translateX(-50%) translateY(8px)',
+    width: '80%',
+    zIndex: 10,
+    padding: open ? '8px' : '0 8px',
   };
 }
  
@@ -44,9 +159,14 @@ export default function Landing() {
       {/* Navbar */}
       <div className="navbar">
  
-        {/* Logo */}
+        {/* Logo — ✅ navigate('/') not '/home' */}
         <div className="nav-logo">
-          <img src="/sharetrajet-logo-v2.png" alt="ShareTrajet logo" className="nav-logo-img" />
+          <img
+            src="/sharetrajet-logo-v2.png"
+            alt="ShareTrajet logo"
+            className="nav-logo-img"
+            onClick={() => navigate('/')}
+          />
         </div>
  
         {/* Right actions */}
@@ -103,42 +223,26 @@ export default function Landing() {
               Offer a Ride
             </button>
  
-            {showOfferMenu && (
-              <div style={{
-                position: 'absolute',
-                bottom: '70px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                background: '#fff',
-                borderRadius: '12px',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
-                padding: '10px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '8px',
-                width: '80%',
-                zIndex: 10,
-              }}>
-                <button style={menuBtnStyle('#2563eb')} onClick={() => navigate('/profile')}>
-                  👤 My Profile
-                </button>
-                <button style={menuBtnStyle('#7c3aed')} onClick={() => navigate('/messages')}>
-                  💬 Messages
-                </button>
-                <button style={menuBtnStyle('#0369a1')} onClick={() => navigate('/preferences')}>
-                  ⚙️ Preferences
-                </button>
-                <button style={menuBtnStyle('#374151')} onClick={() => navigate('/settings')}>
-                  🔧 Settings
-                </button>
-                <button style={menuBtnStyle('#0f766e')} onClick={() => navigate('/verified')}>
-                  ✅ Get Verified
-                </button>
-                <button style={menuBtnStyle('#b45309')} onClick={() => navigate('/ratings')}>
-                  ⭐ My Ratings
-                </button>
-              </div>
-            )}
+            <div style={getDropdownOpenStyle(showOfferMenu)}>
+              <button style={menuBtnStyle('#2563eb')} onClick={() => navigate('/profile')}>
+                <IconProfile color="white" /> My Profile
+              </button>
+              <button style={menuBtnStyle('#7c3aed')} onClick={() => navigate('/messages')}>
+                <IconMessage color="white" /> Messages
+              </button>
+              <button style={menuBtnStyle('#0369a1')} onClick={() => navigate('/preferences')}>
+                <IconPreferences color="white" /> Preferences
+              </button>
+              <button style={menuBtnStyle('#374151')} onClick={() => navigate('/settings')}>
+                <IconSettings color="white" /> Settings
+              </button>
+              <button style={menuBtnStyle('#0f766e')} onClick={() => navigate('/verified')}>
+                <IconVerified color="white" /> Get Verified
+              </button>
+              <button style={menuBtnStyle('#b45309')} onClick={() => navigate('/ratings')}>
+                <IconStar color="white" /> My Ratings
+              </button>
+            </div>
           </div>
  
           {/* ── PASSENGER CARD ── */}
@@ -158,33 +262,17 @@ export default function Landing() {
               Find a Ride
             </button>
  
-            {showFindMenu && (
-              <div style={{
-                position: 'absolute',
-                bottom: '70px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                background: '#fff',
-                borderRadius: '12px',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
-                padding: '10px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '8px',
-                width: '80%',
-                zIndex: 10,
-              }}>
-                <button style={menuBtnStyle('#2563eb')} onClick={() => navigate('/tripdetails')}>
-                  🔍 Search a Trip
-                </button>
-                <button style={menuBtnStyle('#d4521a')} onClick={() => navigate('/publish')}>
-                  📋 Publish a Trip
-                </button>
-                <button style={menuBtnStyle('#0f766e')} onClick={() => navigate('/reservation')}>
-                  📅 My Reservations
-                </button>
-              </div>
-            )}
+            <div style={getDropdownOpenStyle(showFindMenu)}>
+              <button style={menuBtnStyle('#2563eb')} onClick={() => navigate('/tripdetails')}>
+                <IconSearch color="white" /> Search a Trip
+              </button>
+              <button style={menuBtnStyle('#d4521a')} onClick={() => navigate('/publish')}>
+                <IconPublish color="white" /> Publish a Trip
+              </button>
+              <button style={menuBtnStyle('#0f766e')} onClick={() => navigate('/reservation')}>
+                <IconCalendar color="white" /> My Reservations
+              </button>
+            </div>
           </div>
  
         </div>

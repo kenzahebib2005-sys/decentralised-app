@@ -7,7 +7,7 @@ export function SiteHeader() {
   return (
     <header className="st-header">
       <Link to="/ratings" className="st-header__logo">
-        <img src="/sharetrajet-logo-v2.png" alt="ShareTrajet" className="st-header__logo-image" />
+        <img src="/sharetrajet-logo-v2.png" alt="ShareTrajet" className="st-header__logo-image" onClick={() => navigate('/home')} />
       </Link>
       <div className="st-header__actions">
         <button type="button" className="st-btn st-btn--primary" onClick={() => navigate('/signup')}>

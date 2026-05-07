@@ -16,13 +16,25 @@ function Publish() {
   const navigate = useNavigate();
 
   const cities = {
-    alger: { lat: 36.75, lon: 3.06 },
+    alger: { lat: 28.0339, lon: 1.6596 },
     constantine: { lat: 36.36, lon: 6.61 },
     oran: { lat: 35.69, lon: -0.63 },
     setif: { lat: 36.19, lon: 5.41 },
-    annaba: { lat: 36.9, lon: 7.76 }
-    
-   
+    annaba: { lat: 36.9, lon: 7.76 },
+    bejaia: { lat: 36.75, lon: 5.06 },
+    medea : { lat: 36.27, lon: 2.75 },
+    tlemcen: { lat: 34.88, lon: -1.32 },
+    ouargla: { lat: 31.95, lon: 5.32 },
+    timimoun: { lat: 29.25, lon: 0.27 },
+    Béchar: { lat: 31.62, lon: -2.22 },
+    bouimerdes: { lat: 36.77, lon: 3.48 },
+    bouira: { lat: 36.37, lon: 2.9 },
+    tiziouzou: { lat: 36.71, lon: 4.05 },
+    laghouat: { lat: 33.8, lon: 2.87 },
+    ghardaia: { lat: 32.49, lon: 3.67 },
+    eloued: { lat: 33.36, lon: 6.86 },
+    tamenraset: { lat: 22.5, lon: 5.53 },
+    adrar: { lat: 27.52, lon: 0.17 },
   };
 
   const getDistance = (lat1, lon1, lat2, lon2) => {
@@ -77,9 +89,13 @@ function Publish() {
       <div className="navbar">
  
         {/* Logo */}
-        <div className="nav-logo">
-          <img src="/public/sharetrajet-logo-v2.png" alt="ShareTrajet logo" className="nav-logo-img" />
-        
+           <div className="nav-logo">
+          <img
+            src="/sharetrajet-logo-v2.png"
+            alt="ShareTrajet logo"
+            className="nav-logo-img"
+            onClick={() => navigate('/')}
+          />
         </div>
  
         {/* Center links */}

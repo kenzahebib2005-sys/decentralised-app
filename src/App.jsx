@@ -13,18 +13,18 @@ import Signin from './pages/signin.jsx';
 import Notifications from './pages/notifications.jsx';
 import TripDetails from './pages/tripdetails.jsx';
 import ReservationPage from './pages/ReservationPage.jsx';
-import HomePage from './pages/landing.jsx';  // ← capital, and import HomePage specifically
-
+import Landing  from './pages/landing.jsx';
+import Home from './pages/home.jsx';
 export default function App() {
   return (
     <Routes>
-      {/* 1. AUTH ROUTES */}
+      {/* 1. LANDING */}
+      <Route path="/" element={<Landing />} />
+      <Route path="/home" element={<home />} />
+
+      {/* 2. AUTH ROUTES */}
       <Route path="/signup" element={<Signup />} />
       <Route path="/signin" element={<Signin />} />
-
-      {/* 2. LANDING */}
-      <Route path="/" element={<HomePage />} />
-   
 
       {/* 3. DASHBOARD ROUTES */}
       <Route element={<DashboardLayout />}>
@@ -45,7 +45,7 @@ export default function App() {
       <Route path="/notifications" element={<Notifications />} />
 
       {/* 5. FALLBACK */}
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="*" element={<Navigate to="/signin" replace />} />
     </Routes>
   );
 }

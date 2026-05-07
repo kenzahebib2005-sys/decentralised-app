@@ -10,9 +10,13 @@ export default function ReservationPage() {
       <div className="navbar">
  
         {/* Logo */}
-        <div className="nav-logo">
-          <img src="/sharetrajet-logo-v2.png" alt="ShareTrajet logo" className="nav-logo-img" />
-         
+          <div className="nav-logo">
+          <img
+            src="/sharetrajet-logo-v2.png"
+            alt="ShareTrajet logo"
+            className="nav-logo-img"
+            onClick={() => navigate('/')}
+          />
         </div>
  
         {/* Center links */}
