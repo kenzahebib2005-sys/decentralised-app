@@ -165,7 +165,7 @@ export default function Landing() {
             src="/sharetrajet-logo-v2.png"
             alt="ShareTrajet logo"
             className="nav-logo-img"
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/home')}
           />
         </div>
  
