@@ -243,15 +243,15 @@ function Navbar() {
         </Link>
  
         {/* Navigation links */}
-        <nav
-          className={`navLinks ${menuOpen ? 'navLinks--open' : ''}`}
-          aria-label="Primary"
-        >
-          <a href="#publish">publish</a>
-          <a href="#trips">trips</a>
-          <a href="#how">How it works</a>
-          <a href="#advantages">advantages</a>
-        </nav>
+      <nav
+  className={`navLinks ${menuOpen ? 'navLinks--open' : ''}`}
+  aria-label="Primary"
+>
+  <a href="#publish" onClick={() => setMenuOpen(false)}>publish</a>
+  <a href="#trips" onClick={() => setMenuOpen(false)}>trips</a>
+  <a href="#how" onClick={() => setMenuOpen(false)}>How it works</a>
+  <a href="#advantages" onClick={() => setMenuOpen(false)}>advantages</a>
+</nav>
  
         {/* Right actions: Sign up / Sign in / Burger */}
         <div className="navRight">
@@ -725,7 +725,6 @@ function Footer() {
     </footer>
   )
 }
- 
  
 export default function Home() {
   return (

@@ -1298,3 +1298,8 @@ select {
 @media (max-width: 600px) {
   .footerInner { grid-template-columns: 1fr; }
 }
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}

@@ -16,7 +16,7 @@ function Publish() {
   const navigate = useNavigate();
 
   const cities = {
-    alger: { lat: 28.0339, lon: 1.6596 },
+    alger: { lat: 36.75, lon: 3.04 },
     constantine: { lat: 36.36, lon: 6.61 },
     oran: { lat: 35.69, lon: -0.63 },
     setif: { lat: 36.19, lon: 5.41 },
@@ -35,6 +35,8 @@ function Publish() {
     eloued: { lat: 33.36, lon: 6.86 },
     tamenraset: { lat: 22.5, lon: 5.53 },
     adrar: { lat: 27.52, lon: 0.17 },
+    ksar: { lat: 26.9, lon: 0.1 },
+  
   };
 
   const getDistance = (lat1, lon1, lat2, lon2) => {

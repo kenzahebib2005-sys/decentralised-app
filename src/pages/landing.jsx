@@ -227,19 +227,19 @@ export default function Landing() {
               <button style={menuBtnStyle('#2563eb')} onClick={() => navigate('/profile')}>
                 <IconProfile color="white" /> My Profile
               </button>
-              <button style={menuBtnStyle('#7c3aed')} onClick={() => navigate('/messages')}>
+              <button style={menuBtnStyle('#2563eb')} onClick={() => navigate('/messages')}>
                 <IconMessage color="white" /> Messages
               </button>
-              <button style={menuBtnStyle('#0369a1')} onClick={() => navigate('/preferences')}>
+              <button style={menuBtnStyle('#2563eb')} onClick={() => navigate('/preferences')}>
                 <IconPreferences color="white" /> Preferences
               </button>
-              <button style={menuBtnStyle('#374151')} onClick={() => navigate('/settings')}>
+              <button style={menuBtnStyle('#2563eb')} onClick={() => navigate('/settings')}>
                 <IconSettings color="white" /> Settings
               </button>
-              <button style={menuBtnStyle('#0f766e')} onClick={() => navigate('/verified')}>
+              <button style={menuBtnStyle('#2563eb')} onClick={() => navigate('/verified')}>
                 <IconVerified color="white" /> Get Verified
               </button>
-              <button style={menuBtnStyle('#b45309')} onClick={() => navigate('/ratings')}>
+              <button style={menuBtnStyle('#2563eb')} onClick={() => navigate('/ratings')}>
                 <IconStar color="white" /> My Ratings
               </button>
             </div>
@@ -263,13 +263,13 @@ export default function Landing() {
             </button>
  
             <div style={getDropdownOpenStyle(showFindMenu)}>
-              <button style={menuBtnStyle('#2563eb')} onClick={() => navigate('/tripdetails')}>
+              <button style={menuBtnStyle('#d4521a')} onClick={() => navigate('/tripdetails')}>
                 <IconSearch color="white" /> Search a Trip
               </button>
               <button style={menuBtnStyle('#d4521a')} onClick={() => navigate('/publish')}>
                 <IconPublish color="white" /> Publish a Trip
               </button>
-              <button style={menuBtnStyle('#0f766e')} onClick={() => navigate('/reservation')}>
+              <button style={menuBtnStyle('#d4521a')} onClick={() => navigate('/reservation')}>
                 <IconCalendar color="white" /> My Reservations
               </button>
             </div>

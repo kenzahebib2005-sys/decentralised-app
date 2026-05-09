@@ -1,4 +1,6 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import { PageTransition } from './components/PageTransition.jsx';
 import { DashboardLayout } from './components/DashboardLayout.jsx';
 import { RatingsPage } from './pages/RatingsPage.jsx';
 import { CommentPage } from './pages/CommentPage.jsx';
@@ -13,39 +15,41 @@ import Signin from './pages/signin.jsx';
 import Notifications from './pages/notifications.jsx';
 import TripDetails from './pages/tripdetails.jsx';
 import ReservationPage from './pages/ReservationPage.jsx';
-import Landing  from './pages/landing.jsx';
+import Landing from './pages/landing.jsx';
 import Home from './pages/home.jsx';
+
 export default function App() {
+  const location = useLocation();
+
   return (
-    <Routes>
-      {/* 1. LANDING */}
-      <Route path="/" element={<Landing />} />
-   <Route path="/home" element={<Home />} />
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
 
-      {/* 2. AUTH ROUTES */}
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/signin" element={<Signin />} />
+        <Route path="/" element={<PageTransition><Landing /></PageTransition>} />
+        <Route path="/home" element={<PageTransition><Home /></PageTransition>} />
 
-      {/* 3. DASHBOARD ROUTES */}
-      <Route element={<DashboardLayout />}>
-        <Route path="/dashboard" element={<Navigate to="/reservation" replace />} />
-        <Route path="/ratings" element={<RatingsPage />} />
-        <Route path="/comment" element={<CommentPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/messages" element={<MessagesPage />} />
-        <Route path="/settings" element={<SettingsPage />} />
-        <Route path="/preferences" element={<PreferencesPage />} />
-        <Route path="/verified" element={<VerifiedPage />} />
-      </Route>
+        <Route path="/signup" element={<PageTransition><Signup /></PageTransition>} />
+        <Route path="/signin" element={<PageTransition><Signin /></PageTransition>} />
 
-      {/* 4. MAIN APP ROUTES */}
-      <Route path="/publish" element={<Publish />} />
-      <Route path="/reservation" element={<ReservationPage />} />
-      <Route path="/tripdetails" element={<TripDetails />} />
-      <Route path="/notifications" element={<Notifications />} />
+        <Route element={<DashboardLayout />}>
+          <Route path="/dashboard" element={<Navigate to="/reservation" replace />} />
+          <Route path="/ratings"     element={<PageTransition><RatingsPage /></PageTransition>} />
+          <Route path="/comment"     element={<PageTransition><CommentPage /></PageTransition>} />
+          <Route path="/profile"     element={<PageTransition><ProfilePage /></PageTransition>} />
+          <Route path="/messages"    element={<PageTransition><MessagesPage /></PageTransition>} />
+          <Route path="/settings"    element={<PageTransition><SettingsPage /></PageTransition>} />
+          <Route path="/preferences" element={<PageTransition><PreferencesPage /></PageTransition>} />
+          <Route path="/verified"    element={<PageTransition><VerifiedPage /></PageTransition>} />
+        </Route>
 
-      {/* 5. FALLBACK */}
-      <Route path="*" element={<Navigate to="/signin" replace />} />
-    </Routes>
+        <Route path="/publish"       element={<PageTransition><Publish /></PageTransition>} />
+        <Route path="/reservation"   element={<PageTransition><ReservationPage /></PageTransition>} />
+        <Route path="/tripdetails"   element={<PageTransition><TripDetails /></PageTransition>} />
+        <Route path="/notifications" element={<PageTransition><Notifications /></PageTransition>} />
+
+        <Route path="*" element={<Navigate to="/signin" replace />} />
+
+      </Routes>
+    </AnimatePresence>
   );
 }
